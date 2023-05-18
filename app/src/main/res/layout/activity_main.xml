@@ -9,11 +9,24 @@
     tools:context=".MainActivity"
     android:background="@color/Black">
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView_home"
+        app:queryHint="Enter text..."
+        app:iconifiedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/round_back_gray"
+        android:layout_margin="16dp"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_home"
         android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchView_home"
+        >
     </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
